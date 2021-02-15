@@ -8,9 +8,11 @@ public class LongestPrefix {
 
         for(int i=1; i<str.length; i++)
         {
+            System.out.println(str[i].indexOf(prefix));
             while(str[i].indexOf(prefix) != 0)
             {
                 prefix = prefix.substring(0, prefix.length() -1);
+                System.out.println(prefix);
                 if (prefix.isEmpty())   return "";
             }
         }
@@ -20,7 +22,7 @@ public class LongestPrefix {
 //    public static void main(String[] args) {
 //        try {
 //            LongestPrefix longestPrefix = new LongestPrefix();
-//            String[] strs = new String[]{"flower", "flow", "flight"};
+//            String[] strs = new String[]{};
 //            String prefix = longestPrefix.solution(strs);
 //            System.out.println(prefix);
 //        }
